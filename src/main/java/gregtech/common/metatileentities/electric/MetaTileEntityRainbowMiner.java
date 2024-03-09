@@ -92,6 +92,7 @@ public class MetaTileEntityRainbowMiner extends MetaTileEntity {
             }
         }
         ThreadLocalRandom random = ThreadLocalRandom.current();
-        if (getInputRedstoneSignal(EnumFacing.UP, true) > 0) getWorld().spawnEntity(new EntityItem(getWorld(), getPos().getX(), getPos().getY() + 1, getPos().getZ(), stacks.get(random.nextInt(0, stacks.size()))));
+        if (getInputRedstoneSignal(EnumFacing.UP, true) > 0) getWorld().spawnEntity(new EntityItem(getWorld(),
+                getPos().getX(), getPos().getY() + 1, getPos().getZ(), stacks.get(random.nextInt(0, stacks.size()))));
     }
 }

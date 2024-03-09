@@ -1457,8 +1457,7 @@ public abstract class MetaTileEntity implements ISyncedTileEntity, CoverHolder, 
         }
     }
 
-    public void doExplosion(float explosionPower) {
-    }
+    public void doExplosion(float explosionPower) {}
 
     /**
      * Mark the MTE as having been blown up by an explosion

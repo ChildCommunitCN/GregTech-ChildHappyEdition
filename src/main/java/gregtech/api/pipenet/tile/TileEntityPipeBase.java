@@ -551,6 +551,5 @@ public abstract class TileEntityPipeBase<PipeType extends Enum<PipeType> & IPipe
         }
     }
 
-    public void doExplosion(float explosionPower) {
-    }
+    public void doExplosion(float explosionPower) {}
 }

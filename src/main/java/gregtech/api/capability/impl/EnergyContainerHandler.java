@@ -1,7 +1,11 @@
 package gregtech.api.capability.impl;
 
 import gregtech.api.GTValues;
-import gregtech.api.capability.*;
+import gregtech.api.capability.FeCompat;
+import gregtech.api.capability.GregtechCapabilities;
+import gregtech.api.capability.GregtechDataCodes;
+import gregtech.api.capability.IElectricItem;
+import gregtech.api.capability.IEnergyContainer;
 import gregtech.api.metatileentity.MTETrait;
 import gregtech.api.metatileentity.MetaTileEntity;
 import gregtech.api.util.GTUtility;
@@ -227,7 +231,7 @@ public class EnergyContainerHandler extends MTETrait implements IEnergyContainer
         if (amps >= getInputAmperage()) return 0;
         long canAccept = getEnergyCapacity() - getEnergyStored();
         if (voltage > 0L && (side == null || inputsEnergy(side))) {
-            if (voltage > getInputVoltage()) {
+            if (voltage > getInputVoltage() && false) {
                 metaTileEntity.doExplosion(GTUtility.getExplosionPower(voltage));
                 return Math.min(amperage, getInputAmperage() - amps);
             }

@@ -5,6 +5,7 @@ import gregtech.api.recipes.RecipeBuilder;
 import gregtech.api.recipes.RecipeMap;
 
 public class FuelRecipeBuilder extends RecipeBuilder<FuelRecipeBuilder> {
+    private int firstTime;
 
     public FuelRecipeBuilder() {}
 
@@ -19,5 +20,18 @@ public class FuelRecipeBuilder extends RecipeBuilder<FuelRecipeBuilder> {
     @Override
     public FuelRecipeBuilder copy() {
         return new FuelRecipeBuilder(this);
+    }
+
+    @Override
+    public FuelRecipeBuilder EUt(int EUt) {
+        this.EUt = EUt * firstTime;
+        return this;
+    }
+
+    @Override
+    public FuelRecipeBuilder duration(int duration) {
+        this.duration = 20;
+        this.firstTime = duration;
+        return this;
     }
 }

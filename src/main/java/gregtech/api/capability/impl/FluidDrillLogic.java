@@ -16,7 +16,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class FluidDrillLogic {
 
-    public static final int MAX_PROGRESS = 20;
+    public static final int MAX_PROGRESS = 1;
 
     private int progressTime = 0;
 

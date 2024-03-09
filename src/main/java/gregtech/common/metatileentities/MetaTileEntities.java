@@ -21,14 +21,77 @@ import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.BlockTurbineCasing;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.metatileentities.converter.MetaTileEntityConverter;
-import gregtech.common.metatileentities.electric.*;
-import gregtech.common.metatileentities.multi.*;
-import gregtech.common.metatileentities.multi.electric.*;
+import gregtech.common.metatileentities.electric.MetaTileEntityAlarm;
+import gregtech.common.metatileentities.electric.MetaTileEntityBatteryBuffer;
+import gregtech.common.metatileentities.electric.MetaTileEntityBlockBreaker;
+import gregtech.common.metatileentities.electric.MetaTileEntityCharger;
+import gregtech.common.metatileentities.electric.MetaTileEntityDiode;
+import gregtech.common.metatileentities.electric.MetaTileEntityFisher;
+import gregtech.common.metatileentities.electric.MetaTileEntityGasCollector;
+import gregtech.common.metatileentities.electric.MetaTileEntityHull;
+import gregtech.common.metatileentities.electric.MetaTileEntityItemCollector;
+import gregtech.common.metatileentities.electric.MetaTileEntityMagicEnergyAbsorber;
+import gregtech.common.metatileentities.electric.MetaTileEntityMiner;
+import gregtech.common.metatileentities.electric.MetaTileEntityPump;
+import gregtech.common.metatileentities.electric.MetaTileEntityRainbowMiner;
+import gregtech.common.metatileentities.electric.MetaTileEntityRockBreaker;
+import gregtech.common.metatileentities.electric.MetaTileEntitySingleCombustion;
+import gregtech.common.metatileentities.electric.MetaTileEntitySingleTurbine;
+import gregtech.common.metatileentities.electric.MetaTileEntityTransformer;
+import gregtech.common.metatileentities.electric.MetaTileEntityWorldAccelerator;
+import gregtech.common.metatileentities.electric.SimpleMachineMetaTileEntityResizable;
+import gregtech.common.metatileentities.multi.BoilerType;
+import gregtech.common.metatileentities.multi.MetaTileEntityCokeOven;
+import gregtech.common.metatileentities.multi.MetaTileEntityCokeOvenHatch;
+import gregtech.common.metatileentities.multi.MetaTileEntityLargeBoiler;
+import gregtech.common.metatileentities.multi.MetaTileEntityMultiblockTank;
+import gregtech.common.metatileentities.multi.MetaTileEntityPrimitiveBlastFurnace;
+import gregtech.common.metatileentities.multi.MetaTileEntityPrimitiveWaterPump;
+import gregtech.common.metatileentities.multi.MetaTileEntityPumpHatch;
+import gregtech.common.metatileentities.multi.MetaTileEntityTankValve;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityActiveTransformer;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityAssemblyLine;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityCleanroom;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityCrackingUnit;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityDataBank;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityDistillationTower;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityElectricBlastFurnace;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityFluidDrill;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityFusionReactor;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityHPCA;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityImplosionCompressor;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityLargeChemicalReactor;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityLargeMiner;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityMultiSmelter;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityNetworkSwitch;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityPowerSubstation;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityProcessingArray;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityPyrolyseOven;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityResearchStation;
+import gregtech.common.metatileentities.multi.electric.MetaTileEntityVacuumFreezer;
 import gregtech.common.metatileentities.multi.electric.centralmonitor.MetaTileEntityCentralMonitor;
 import gregtech.common.metatileentities.multi.electric.centralmonitor.MetaTileEntityMonitorScreen;
 import gregtech.common.metatileentities.multi.electric.generator.MetaTileEntityLargeCombustionEngine;
 import gregtech.common.metatileentities.multi.electric.generator.MetaTileEntityLargeTurbine;
-import gregtech.common.metatileentities.multi.multiblockpart.*;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityAutoMaintenanceHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityCleaningMaintenanceHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityComputationHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityDataAccessHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityEnergyHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityFluidHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityItemBus;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityLaserHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMachineHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMaintenanceHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMufflerHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityMultiFluidHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityObjectHolder;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityOpticalDataHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityPassthroughHatchFluid;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityPassthroughHatchItem;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityReservoirHatch;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntityRotorHolder;
+import gregtech.common.metatileentities.multi.multiblockpart.MetaTileEntitySubstationEnergyHatch;
 import gregtech.common.metatileentities.multi.multiblockpart.appeng.MetaTileEntityMEInputBus;
 import gregtech.common.metatileentities.multi.multiblockpart.appeng.MetaTileEntityMEInputHatch;
 import gregtech.common.metatileentities.multi.multiblockpart.appeng.MetaTileEntityMEOutputBus;
@@ -40,13 +103,29 @@ import gregtech.common.metatileentities.multi.multiblockpart.hpca.MetaTileEntity
 import gregtech.common.metatileentities.multi.steam.MetaTileEntitySteamGrinder;
 import gregtech.common.metatileentities.multi.steam.MetaTileEntitySteamOven;
 import gregtech.common.metatileentities.primitive.MetaTileEntityCharcoalPileIgniter;
-import gregtech.common.metatileentities.steam.*;
+import gregtech.common.metatileentities.steam.SteamAlloySmelter;
+import gregtech.common.metatileentities.steam.SteamCompressor;
+import gregtech.common.metatileentities.steam.SteamExtractor;
+import gregtech.common.metatileentities.steam.SteamFurnace;
+import gregtech.common.metatileentities.steam.SteamHammer;
+import gregtech.common.metatileentities.steam.SteamMacerator;
+import gregtech.common.metatileentities.steam.SteamMiner;
+import gregtech.common.metatileentities.steam.SteamRockBreaker;
 import gregtech.common.metatileentities.steam.boiler.SteamCoalBoiler;
 import gregtech.common.metatileentities.steam.boiler.SteamLavaBoiler;
 import gregtech.common.metatileentities.steam.boiler.SteamSolarBoiler;
 import gregtech.common.metatileentities.steam.multiblockpart.MetaTileEntitySteamHatch;
 import gregtech.common.metatileentities.steam.multiblockpart.MetaTileEntitySteamItemBus;
-import gregtech.common.metatileentities.storage.*;
+import gregtech.common.metatileentities.storage.MetaTileEntityBuffer;
+import gregtech.common.metatileentities.storage.MetaTileEntityCrate;
+import gregtech.common.metatileentities.storage.MetaTileEntityCreativeChest;
+import gregtech.common.metatileentities.storage.MetaTileEntityCreativeEnergy;
+import gregtech.common.metatileentities.storage.MetaTileEntityCreativeTank;
+import gregtech.common.metatileentities.storage.MetaTileEntityDrum;
+import gregtech.common.metatileentities.storage.MetaTileEntityLockedSafe;
+import gregtech.common.metatileentities.storage.MetaTileEntityQuantumChest;
+import gregtech.common.metatileentities.storage.MetaTileEntityQuantumTank;
+import gregtech.common.metatileentities.storage.MetaTileEntityWorkbench;
 import gregtech.common.pipelike.fluidpipe.longdistance.MetaTileEntityLDFluidEndpoint;
 import gregtech.common.pipelike.itempipe.longdistance.MetaTileEntityLDItemEndpoint;
 import gregtech.integration.jei.multiblock.MultiblockInfoCategory;
@@ -115,6 +194,8 @@ public class MetaTileEntities {
     public static final SimpleMachineMetaTileEntity[] GAS_COLLECTOR = new MetaTileEntityGasCollector[GTValues.V.length - 1];
     public static final MetaTileEntityRockBreaker[] ROCK_BREAKER = new MetaTileEntityRockBreaker[GTValues.V.length - 1];
     public static final MetaTileEntityMiner[] MINER = new MetaTileEntityMiner[GTValues.V.length - 1];
+
+    public static MetaTileEntityRainbowMiner RAINBOW_MINER;
 
     // GENERATORS SECTION
     public static final SimpleGeneratorMetaTileEntity[] COMBUSTION_GENERATOR = new SimpleGeneratorMetaTileEntity[4];
@@ -1089,6 +1170,9 @@ public class MetaTileEntities {
             NONUPLE_EXPORT_HATCH[index + 1] = registerMetaTileEntity(1795 + index,
                     new MetaTileEntityMultiFluidHatch(gregtechId("fluid_hatch.export_9x." + tierName), i, 9, true));
         }
+
+        RAINBOW_MINER = registerMetaTileEntity(1900,
+                new MetaTileEntityRainbowMiner(gregtechId("rainbow_miner")));
 
         /*
          * FOR ADDON DEVELOPERS:

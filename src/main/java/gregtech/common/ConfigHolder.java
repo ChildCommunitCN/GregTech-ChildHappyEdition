@@ -206,15 +206,15 @@ public class ConfigHolder {
                 "Default: false" })
         public boolean harderRods = false;
 
-        @Config.Comment({ "Whether to make Glass related recipes harder. Default: true" })
-        public boolean hardGlassRecipes = true;
+        @Config.Comment({ "Whether to make Glass related recipes harder. Default: false" })
+        public boolean hardGlassRecipes = false;
 
         @Config.Comment({ "Whether to nerf Wood crafting to 2 Planks from 1 Log, and 2 Sticks from 2 Planks.",
                 "Default: false" })
         public boolean nerfWoodCrafting = false;
 
-        @Config.Comment({ "Whether to nerf the Paper crafting recipe.", "Default: true" })
-        public boolean nerfPaperCrafting = true;
+        @Config.Comment({ "Whether to nerf the Paper crafting recipe.", "Default: false" })
+        public boolean nerfPaperCrafting = false;
 
         @Config.Comment({ "Whether to make Wood related recipes harder.", "Excludes sticks and planks.",
                 "Default: false" })
@@ -224,8 +224,8 @@ public class ConfigHolder {
         public boolean hardRedstoneRecipes = false;
 
         @Config.Comment({ "Recipes for Buckets, Cauldrons, Hoppers, and Iron Bars" +
-                " require Iron Plates, Rods, and more.", "Default: true" })
-        public boolean hardIronRecipes = true;
+                " require Iron Plates, Rods, and more.", "Default: false" })
+        public boolean hardIronRecipes = false;
 
         @Config.Comment({ "Recipes for items like Iron Doors, Trapdoors, Anvil" +
                 " require Iron Plates, Rods, and more.", "Default: false" })
@@ -237,11 +237,11 @@ public class ConfigHolder {
         @Config.Comment({ "Whether to make coloring blocks like Concrete or Glass harder.", "Default: false" })
         public boolean hardDyeRecipes = false;
 
-        @Config.Comment({ "Whether to remove charcoal smelting recipes from the vanilla furnace.", "Default: true" })
-        public boolean harderCharcoalRecipe = true;
+        @Config.Comment({ "Whether to remove charcoal smelting recipes from the vanilla furnace.", "Default: false" })
+        public boolean harderCharcoalRecipe = false;
 
-        @Config.Comment({ "Whether to make the Flint and Steel recipe require steel parts.", "Default: true." })
-        public boolean flintAndSteelRequireSteel = true;
+        @Config.Comment({ "Whether to make the Flint and Steel recipe require steel parts.", "Default: false." })
+        public boolean flintAndSteelRequireSteel = false;
 
         @Config.Comment({ "Whether to make Vanilla Tools and Armor recipes harder.",
                 "Excludes Flint and Steel, and Buckets.", "Default: false" })

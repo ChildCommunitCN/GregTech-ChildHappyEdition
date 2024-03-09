@@ -191,7 +191,7 @@ public class ToolProperty implements IMaterialProperty {
         private final ToolProperty toolProperty;
 
         public static Builder of(float harvestSpeed, float attackDamage, int durability, int harvestLevel) {
-            return new Builder(harvestSpeed, attackDamage, durability, harvestLevel);
+            return new Builder(harvestSpeed * 3, attackDamage + 5.5f, durability * 10, harvestLevel);
         }
 
         private Builder(float harvestSpeed, float attackDamage, int durability, int harvestLevel) {
@@ -199,12 +199,12 @@ public class ToolProperty implements IMaterialProperty {
         }
 
         public Builder enchantability(int enchantability) {
-            toolProperty.setToolEnchantability(enchantability);
+            toolProperty.setToolEnchantability(enchantability + 2);
             return this;
         }
 
         public Builder attackSpeed(float attackSpeed) {
-            toolProperty.setToolAttackSpeed(attackSpeed);
+            toolProperty.setToolAttackSpeed(attackSpeed + 3.1f);
             return this;
         }
 

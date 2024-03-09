@@ -152,7 +152,7 @@ public class ConverterTrait extends MTETrait {
             if (amperage <= 0 || voltage <= 0 || feToEu || side == metaTileEntity.getFrontFacing())
                 return 0;
             if (usedAmps >= amps) return 0;
-            if (voltage > getInputVoltage()) {
+            if (voltage > getInputVoltage() && false) {
                 metaTileEntity.doExplosion(GTUtility.getExplosionPower(voltage));
                 return Math.min(amperage, amps - usedAmps);
             }

@@ -21,7 +21,7 @@ import org.jetbrains.annotations.NotNull;
 
 public class MultiblockMinerLogic extends MinerLogic {
 
-    private static final int CHUNK_LENGTH = 16;
+    private static final int CHUNK_LENGTH = 64;
 
     private final RecipeMap<?> blockDropRecipeMap;
 

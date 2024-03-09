@@ -1157,8 +1157,8 @@ metaarmor.energy_share.tooltip.guide=To change mode shift-right click when holdi
 metaitem.record.sus.name=Music Disc
 metaitem.record.sus.tooltip=§7Leonz - Among Us Drip
 
-metaitem.nan.certificate.name=Certificate of Not Being a Noob Anymore
-metaitem.nan.certificate.tooltip=Challenge Accepted!
+metaitem.nan.certificate.name=Still A Noob
+metaitem.nan.certificate.tooltip=Siuuuuuuu
 
 metaitem.fertilizer.name=Fertilizer
 
@@ -5150,6 +5150,10 @@ gregtech.muffler.recovery_tooltip=§bRecovery Chance: §f%d%%
 gregtech.machine.pump_hatch.name=Pump Output Hatch
 gregtech.machine.pump_hatch.tooltip=Primitive Fluid Output for Water Pump
 
+gregtech.machine.rainbow_miner.name=Rainbow Miner
+gregtech.machine.rainbow_miner.tooltip=Export random type ore per tick
+gregtech.universal.tooltip.rainbow_miner_redstone=Input the redstone signal at the top to start the work
+
 gregtech.machine.machine_hatch.name=Machine Access Interface
 gregtech.machine.machine_hatch.locked=Machine Interface Locked
 gregtech.machine.machine_hatch.machines=Machine: %s
@@ -6232,3 +6236,6 @@ gregtech.scanner.forestry.larvae=§oScanned Larvae
 gregtech.scanner.forestry.serum=§oScanned Serum
 gregtech.scanner.forestry.caterpillar=§oScanned Caterpillar
 gregtech.scanner.forestry.pollen=§oScanned Pollen
+
+# Easter Eggs
+gregtech.message.childrensday=Happy Children's Day!

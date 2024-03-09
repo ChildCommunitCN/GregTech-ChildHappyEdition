@@ -1157,8 +1157,8 @@ metaarmor.energy_share.tooltip.guide=持握物品并潜行右击以更换模式
 metaitem.record.sus.name=音乐唱片
 metaitem.record.sus.tooltip=§7Leonz - Among Us Drip
 
-metaitem.nan.certificate.name=不再是菜鸟的证明
-metaitem.nan.certificate.tooltip=已接受挑战！
+metaitem.nan.certificate.name=菜鸟的身份证
+metaitem.nan.certificate.tooltip=Siuuuuuuu
 
 metaitem.fertilizer.name=肥料
 
@@ -5139,6 +5139,10 @@ gregtech.muffler.recovery_tooltip=§b收集几率：§f%d%%
 gregtech.machine.pump_hatch.name=水泵输出仓
 gregtech.machine.pump_hatch.tooltip=原始水泵专用流体输出口
 
+gregtech.machine.rainbow_miner.name=彩虹矿工
+gregtech.machine.rainbow_miner.tooltip=输出随机类型的矿石
+gregtech.universal.tooltip.rainbow_miner_redstone=在顶部输入红石信号以启动工作
+
 gregtech.machine.machine_hatch.name=机器访问接口
 gregtech.machine.machine_hatch.locked=机器接口已锁定
 gregtech.machine.machine_hatch.machines=机器：%s
@@ -6224,3 +6228,6 @@ gregtech.scanner.forestry.larvae=§o幼体（已扫描）
 gregtech.scanner.forestry.serum=§o血清（已扫描）
 gregtech.scanner.forestry.caterpillar=§o幼虫（已扫描）
 gregtech.scanner.forestry.pollen=§o花粉（已扫描）
+
+# Easter Eggs
+gregtech.message.childrensday=儿童节快乐！

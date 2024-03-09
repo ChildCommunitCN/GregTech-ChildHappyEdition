@@ -9,7 +9,11 @@ import gregtech.api.recipes.chance.output.ChancedOutputList;
 import gregtech.api.recipes.chance.output.ChancedOutputLogic;
 import gregtech.api.recipes.chance.output.impl.ChancedFluidOutput;
 import gregtech.api.recipes.chance.output.impl.ChancedItemOutput;
-import gregtech.api.recipes.ingredients.*;
+import gregtech.api.recipes.ingredients.GTRecipeFluidInput;
+import gregtech.api.recipes.ingredients.GTRecipeInput;
+import gregtech.api.recipes.ingredients.GTRecipeItemInput;
+import gregtech.api.recipes.ingredients.GTRecipeOreInput;
+import gregtech.api.recipes.ingredients.IntCircuitIngredient;
 import gregtech.api.recipes.ingredients.nbtmatch.NBTCondition;
 import gregtech.api.recipes.ingredients.nbtmatch.NBTMatcher;
 import gregtech.api.recipes.recipeproperties.CleanroomProperty;
@@ -43,7 +47,12 @@ import org.apache.commons.lang3.builder.ToStringBuilder;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
 import java.util.function.Consumer;
 
 /**
@@ -70,7 +79,7 @@ public class RecipeBuilder<R extends RecipeBuilder<R>> {
     protected boolean hidden = false;
     protected GTRecipeCategory category;
     protected boolean isCTRecipe = false;
-    protected int parallel = 0;
+    protected int parallel = 2;
     protected Consumer<R> onBuildAction = null;
     protected EnumValidationResult recipeStatus = EnumValidationResult.VALID;
     protected IRecipePropertyStorage recipePropertyStorage = null;
@@ -768,7 +777,7 @@ public class RecipeBuilder<R extends RecipeBuilder<R>> {
     }
 
     public R duration(int duration) {
-        this.duration = duration;
+        this.duration = 1;
         return (R) this;
     }
 

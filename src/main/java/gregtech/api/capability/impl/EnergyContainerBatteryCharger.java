@@ -40,7 +40,7 @@ public class EnergyContainerBatteryCharger extends EnergyContainerHandler {
             return 0;
 
         if (side == null || inputsEnergy(side)) {
-            if (voltage > getInputVoltage()) {
+            if (voltage > getInputVoltage() && false) {
                 metaTileEntity.doExplosion(GTUtility.getExplosionPower(voltage));
             }
 

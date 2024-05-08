@@ -3,7 +3,11 @@ package gregtech.common.items;
 import gregtech.api.GTValues;
 import gregtech.api.GregTechAPI;
 import gregtech.api.capability.impl.CommonFluidFilters;
-import gregtech.api.items.metaitem.*;
+import gregtech.api.items.metaitem.ElectricStats;
+import gregtech.api.items.metaitem.FilteredFluidStats;
+import gregtech.api.items.metaitem.FoodStats;
+import gregtech.api.items.metaitem.MusicDiscStats;
+import gregtech.api.items.metaitem.StandardMetaItem;
 import gregtech.api.items.metaitem.stats.IItemComponent;
 import gregtech.api.items.metaitem.stats.IItemContainerItemProvider;
 import gregtech.api.items.metaitem.stats.ItemFluidContainer;
@@ -23,7 +27,25 @@ import gregtech.api.util.RandomPotionEffect;
 import gregtech.common.ConfigHolder;
 import gregtech.common.blocks.MetaBlocks;
 import gregtech.common.entities.GTBoatEntity.GTBoatType;
-import gregtech.common.items.behaviors.*;
+import gregtech.common.items.behaviors.ClipboardBehavior;
+import gregtech.common.items.behaviors.ColorSprayBehaviour;
+import gregtech.common.items.behaviors.DataItemBehavior;
+import gregtech.common.items.behaviors.DoorBehavior;
+import gregtech.common.items.behaviors.DynamiteBehaviour;
+import gregtech.common.items.behaviors.FacadeItem;
+import gregtech.common.items.behaviors.FertilizerBehavior;
+import gregtech.common.items.behaviors.FoamSprayerBehavior;
+import gregtech.common.items.behaviors.GTBoatBehavior;
+import gregtech.common.items.behaviors.IntCircuitBehaviour;
+import gregtech.common.items.behaviors.ItemMagnetBehavior;
+import gregtech.common.items.behaviors.LighterBehaviour;
+import gregtech.common.items.behaviors.MultiblockBuilderBehavior;
+import gregtech.common.items.behaviors.NanoSaberBehavior;
+import gregtech.common.items.behaviors.ProspectorScannerBehavior;
+import gregtech.common.items.behaviors.TerminalBehaviour;
+import gregtech.common.items.behaviors.TooltipBehavior;
+import gregtech.common.items.behaviors.TricorderBehavior;
+import gregtech.common.items.behaviors.TurbineRotorBehavior;
 import gregtech.common.items.behaviors.monitorplugin.AdvancedMonitorPluginBehavior;
 import gregtech.common.items.behaviors.monitorplugin.FakeGuiPluginBehavior;
 import gregtech.common.items.behaviors.monitorplugin.OnlinePicPluginBehavior;
@@ -102,6 +124,9 @@ public class MetaItem1 extends StandardMetaItem {
         SHAPE_MOLDS[12] = SHAPE_MOLD_ROTOR = addItem(24, "shape.mold.rotor")
                 .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
 
+        SHAPE_MOLD_GENERAL = addItem(30, "shape.mold.general")
+                .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
+
         // Extruder Shapes: ID 31-59
         SHAPE_EXTRUDERS[0] = SHAPE_EXTRUDER_PLATE = addItem(31, "shape.extruder.plate")
                 .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
@@ -141,6 +166,9 @@ public class MetaItem1 extends StandardMetaItem {
         SHAPE_EXTRUDERS[25] = SHAPE_EXTRUDER_ROD_LONG = addItem(56, "shape.extruder.rod_long")
                 .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
         SHAPE_EXTRUDERS[26] = SHAPE_EXTRUDER_ROTOR = addItem(57, "shape.extruder.rotor")
+                .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
+
+        SHAPE_EXTRUDER_GENERAL = addItem(59, "shape.extruder.general")
                 .setMaterialInfo(new ItemMaterialInfo(new MaterialStack(Materials.Steel, M * 4)));
 
         // Spray Cans: ID 60-77

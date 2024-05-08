@@ -5169,8 +5169,7 @@ gregtech.machine.pump_hatch.name=Pump Output Hatch
 gregtech.machine.pump_hatch.tooltip=Primitive Fluid Output for Water Pump
 
 gregtech.machine.rainbow_miner.name=Rainbow Miner
-gregtech.machine.rainbow_miner.tooltip=Export random type ore per tick
-gregtech.universal.tooltip.rainbow_miner_redstone=Input the redstone signal at the top to start the work
+gregtech.machine.rainbow_tank.name=Rainbow Tank
 
 gregtech.machine.machine_hatch.name=Machine Access Interface
 gregtech.machine.machine_hatch.locked=Machine Interface Locked

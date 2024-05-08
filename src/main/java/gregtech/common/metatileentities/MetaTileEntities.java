@@ -33,7 +33,6 @@ import gregtech.common.metatileentities.electric.MetaTileEntityItemCollector;
 import gregtech.common.metatileentities.electric.MetaTileEntityMagicEnergyAbsorber;
 import gregtech.common.metatileentities.electric.MetaTileEntityMiner;
 import gregtech.common.metatileentities.electric.MetaTileEntityPump;
-import gregtech.common.metatileentities.electric.MetaTileEntityRainbowMiner;
 import gregtech.common.metatileentities.electric.MetaTileEntityRockBreaker;
 import gregtech.common.metatileentities.electric.MetaTileEntitySingleCombustion;
 import gregtech.common.metatileentities.electric.MetaTileEntitySingleTurbine;
@@ -48,7 +47,10 @@ import gregtech.common.metatileentities.multi.MetaTileEntityMultiblockTank;
 import gregtech.common.metatileentities.multi.MetaTileEntityPrimitiveBlastFurnace;
 import gregtech.common.metatileentities.multi.MetaTileEntityPrimitiveWaterPump;
 import gregtech.common.metatileentities.multi.MetaTileEntityPumpHatch;
+import gregtech.common.metatileentities.multi.MetaTileEntityRainbowMiner;
+import gregtech.common.metatileentities.multi.MetaTileEntityRainbowTank;
 import gregtech.common.metatileentities.multi.MetaTileEntityTankValve;
+import gregtech.common.metatileentities.multi.MetaTileEntityVoidMiner;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityActiveTransformer;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityAssemblyLine;
 import gregtech.common.metatileentities.multi.electric.MetaTileEntityCleanroom;
@@ -196,8 +198,6 @@ public class MetaTileEntities {
     public static final SimpleMachineMetaTileEntity[] GAS_COLLECTOR = new MetaTileEntityGasCollector[GTValues.V.length - 1];
     public static final MetaTileEntityRockBreaker[] ROCK_BREAKER = new MetaTileEntityRockBreaker[GTValues.V.length - 1];
     public static final MetaTileEntityMiner[] MINER = new MetaTileEntityMiner[GTValues.V.length - 1];
-
-    public static MetaTileEntityRainbowMiner RAINBOW_MINER;
 
     // GENERATORS SECTION
     public static final SimpleGeneratorMetaTileEntity[] COMBUSTION_GENERATOR = new SimpleGeneratorMetaTileEntity[4];
@@ -374,6 +374,10 @@ public class MetaTileEntities {
     public static MetaTileEntityLDItemEndpoint LONG_DIST_ITEM_ENDPOINT;
     public static MetaTileEntityLDFluidEndpoint LONG_DIST_FLUID_ENDPOINT;
     public static MetaTileEntityAlarm ALARM;
+
+    public static MetaTileEntityRainbowMiner RAINBOW_MINER;
+    public static MetaTileEntityRainbowTank RAINBOW_TANK;
+    public static MetaTileEntityVoidMiner VOID_MINER;
 
     public static MetaTileEntityConverter[][] ENERGY_CONVERTER = new MetaTileEntityConverter[4][GTValues.V.length];
 
@@ -1184,8 +1188,11 @@ public class MetaTileEntities {
                     new MetaTileEntityMultiFluidHatch(gregtechId("fluid_hatch.export_9x." + tierName), i, 9, true));
         }
 
-        RAINBOW_MINER = registerMetaTileEntity(1900,
-                new MetaTileEntityRainbowMiner(gregtechId("rainbow_miner")));
+        RAINBOW_MINER = registerMetaTileEntity(1900, new MetaTileEntityRainbowMiner(gregtechId("rainbow_miner")));
+
+        RAINBOW_TANK = registerMetaTileEntity(1901, new MetaTileEntityRainbowTank(gregtechId("rainbow_tank")));
+
+        VOID_MINER = registerMetaTileEntity(1902, new MetaTileEntityVoidMiner(gregtechId("void_miner")));
 
         /*
          * FOR ADDON DEVELOPERS:

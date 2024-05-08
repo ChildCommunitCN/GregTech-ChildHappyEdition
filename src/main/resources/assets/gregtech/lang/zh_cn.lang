@@ -5185,8 +5185,7 @@ gregtech.machine.pump_hatch.name=水泵输出仓
 gregtech.machine.pump_hatch.tooltip=原始水泵专用流体输出口
 
 gregtech.machine.rainbow_miner.name=彩虹矿工
-gregtech.machine.rainbow_miner.tooltip=输出随机类型的矿石
-gregtech.universal.tooltip.rainbow_miner_redstone=在顶部输入红石信号以启动工作
+gregtech.machine.rainbow_tank.name=彩虹浴缸
 
 gregtech.machine.machine_hatch.name=机器访问接口
 gregtech.machine.machine_hatch.locked=机器接口已锁定

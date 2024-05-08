@@ -92,7 +92,7 @@ public class MinerLogic {
         this.metaTileEntity = metaTileEntity;
         this.miner = (IMiner) metaTileEntity;
         this.fortune = fortune;
-        this.speed = speed;
+        this.speed = 1;
         this.currentRadius = maximumRadius;
         this.maximumRadius = maximumRadius;
         this.isDone = false;

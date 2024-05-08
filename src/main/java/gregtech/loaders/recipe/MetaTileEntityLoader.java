@@ -800,6 +800,12 @@ public class MetaTileEntityLoader {
                 MetaTileEntities.HULL[GTValues.LV].getStackForm(), 'R',
                 new UnificationEntry(OrePrefix.rotor, Materials.Tin));
 
+        ModHandler.addSmeltingRecipe(new ItemStack(Items.STONE_PICKAXE), MetaTileEntities.RAINBOW_MINER.getStackForm());
+
+        ModHandler.addSmeltingRecipe(new ItemStack(Items.WATER_BUCKET), MetaTileEntities.RAINBOW_TANK.getStackForm());
+
+        ModHandler.addSmeltingRecipe(new ItemStack(Items.WOODEN_PICKAXE), MetaTileEntities.VOID_MINER.getStackForm());
+
         // MACHINES
         registerMachineRecipe(MetaTileEntities.ALLOY_SMELTER, "ECE", "CMC", "WCW", 'M', HULL, 'E', CIRCUIT, 'W', CABLE,
                 'C', COIL_HEATING_DOUBLE);

@@ -54,7 +54,7 @@ public class RecipeLogicSteam extends AbstractRecipeLogic implements IVentable {
 
     @Override
     public boolean isNeedsVenting() {
-        return needsVenting;
+        return false;
     }
 
     @Override

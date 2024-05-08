@@ -25,7 +25,11 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 
 import com.google.common.base.CaseFormat;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public final class MetaItems {
 
@@ -563,6 +567,9 @@ public final class MetaItems {
     public static MetaItem<?>.MetaValueItem LOGO;
 
     public static MetaItem<?>.MetaValueItem MULTIBLOCK_BUILDER;
+
+    public static MetaItem<?>.MetaValueItem SHAPE_EXTRUDER_GENERAL;
+    public static MetaItem<?>.MetaValueItem SHAPE_MOLD_GENERAL;
 
     private static final List<OrePrefix> orePrefixes = new ArrayList<>();
 

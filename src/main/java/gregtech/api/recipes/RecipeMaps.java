@@ -4,9 +4,28 @@ import gregtech.api.GTValues;
 import gregtech.api.gui.GuiTextures;
 import gregtech.api.gui.widgets.ProgressWidget;
 import gregtech.api.gui.widgets.ProgressWidget.MoveType;
-import gregtech.api.recipes.builders.*;
+import gregtech.api.recipes.builders.AssemblerRecipeBuilder;
+import gregtech.api.recipes.builders.AssemblyLineRecipeBuilder;
+import gregtech.api.recipes.builders.BlastRecipeBuilder;
+import gregtech.api.recipes.builders.CircuitAssemblerRecipeBuilder;
+import gregtech.api.recipes.builders.ComputationRecipeBuilder;
+import gregtech.api.recipes.builders.FuelRecipeBuilder;
+import gregtech.api.recipes.builders.FusionRecipeBuilder;
+import gregtech.api.recipes.builders.GasCollectorRecipeBuilder;
+import gregtech.api.recipes.builders.ImplosionRecipeBuilder;
+import gregtech.api.recipes.builders.PrimitiveRecipeBuilder;
+import gregtech.api.recipes.builders.SimpleRecipeBuilder;
+import gregtech.api.recipes.builders.UniversalDistillationRecipeBuilder;
 import gregtech.api.recipes.ingredients.GTRecipeInput;
-import gregtech.api.recipes.machines.*;
+import gregtech.api.recipes.machines.RecipeMapAssemblyLine;
+import gregtech.api.recipes.machines.RecipeMapCokeOven;
+import gregtech.api.recipes.machines.RecipeMapCrackerUnit;
+import gregtech.api.recipes.machines.RecipeMapDistillationTower;
+import gregtech.api.recipes.machines.RecipeMapFluidCanner;
+import gregtech.api.recipes.machines.RecipeMapFormingPress;
+import gregtech.api.recipes.machines.RecipeMapFurnace;
+import gregtech.api.recipes.machines.RecipeMapResearchStation;
+import gregtech.api.recipes.machines.RecipeMapScanner;
 import gregtech.api.unification.OreDictUnifier;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.stack.ItemMaterialInfo;
@@ -1321,4 +1340,7 @@ public class RecipeMaps {
                     .setProgressBar(GuiTextures.PROGRESS_BAR_GAS_COLLECTOR, MoveType.HORIZONTAL)
                     .setSound(GTSoundEvents.TURBINE)
                     .allowEmptyOutput();
+
+    public static final RecipeMap<SimpleRecipeBuilder> VOID_MINER = new RecipeMap<>("void_miner", 1, 4,
+            0, 0, new SimpleRecipeBuilder(), false);
 }

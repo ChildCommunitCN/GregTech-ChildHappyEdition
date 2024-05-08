@@ -1,6 +1,7 @@
 package gregtech.loaders.recipe;
 
 import gregtech.api.GTValues;
+import gregtech.api.GregTechAPI;
 import gregtech.api.items.OreDictNames;
 import gregtech.api.items.metaitem.MetaItem;
 import gregtech.api.metatileentity.multiblock.CleanroomType;
@@ -12,16 +13,23 @@ import gregtech.api.unification.material.MarkerMaterials;
 import gregtech.api.unification.material.Material;
 import gregtech.api.unification.material.Materials;
 import gregtech.api.unification.material.properties.PropertyKey;
+import gregtech.api.unification.material.registry.MaterialRegistry;
 import gregtech.api.unification.ore.OrePrefix;
 import gregtech.api.unification.stack.MaterialStack;
 import gregtech.api.unification.stack.UnificationEntry;
 import gregtech.api.util.Mods;
 import gregtech.common.ConfigHolder;
-import gregtech.common.blocks.*;
+import gregtech.common.blocks.BlockAsphalt;
+import gregtech.common.blocks.BlockCleanroomCasing;
+import gregtech.common.blocks.BlockFusionCasing;
+import gregtech.common.blocks.BlockGlassCasing;
+import gregtech.common.blocks.BlockLamp;
 import gregtech.common.blocks.BlockMachineCasing.MachineCasingType;
 import gregtech.common.blocks.BlockMetalCasing.MetalCasingType;
 import gregtech.common.blocks.BlockTurbineCasing.TurbineCasingType;
 import gregtech.common.blocks.BlockWireCoil.CoilType;
+import gregtech.common.blocks.MetaBlocks;
+import gregtech.common.blocks.StoneVariantBlock;
 import gregtech.common.blocks.StoneVariantBlock.StoneVariant;
 import gregtech.common.items.MetaItems;
 import gregtech.common.metatileentities.MetaTileEntities;
@@ -84,6 +92,7 @@ public class MachineRecipeLoader {
         registerStoneBricksRecipes();
         registerNBTRemoval();
         ConvertHatchToHatch();
+        registerVoidMiner();
     }
 
     private static void registerBendingCompressingRecipes() {
@@ -1480,6 +1489,21 @@ public class MachineRecipeLoader {
             ModHandler.addShapedRecipe("steam_bus_input_to_output_" + STEAM_IMPORT_BUS.getTier(),
                     STEAM_IMPORT_BUS.getStackForm(),
                     "d", "B", 'B', STEAM_EXPORT_BUS.getStackForm());
+        }
+    }
+
+    private static void registerVoidMiner() {
+        for (MaterialRegistry registeredMaterial : GregTechAPI.materialManager.getRegistries()) {
+            for (Material material : registeredMaterial) {
+                if (material.hasProperty(PropertyKey.ORE)) {
+                    RecipeMaps.VOID_MINER.recipeBuilder()
+                            .input(ore, material)
+                            .duration(1)
+                            .EUt(1)
+                            .output(ore, material, 64)
+                            .buildAndRegister();
+                }
+            }
         }
     }
 }
